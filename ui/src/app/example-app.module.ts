@@ -15,11 +15,11 @@
 */
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
+import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 import { AtlasmapNavbarComponent } from './atlasmap-navbar.component';
 
@@ -38,10 +38,20 @@ import { DataMapperModule } from './lib/atlasmap-data-mapper/data-mapper.module'
     DataMapperModule.withInterceptor(),
   ],
   providers: [],
-  bootstrap: [
-    AppComponent,
-    AtlasmapNavbarComponent,
-  ],
+  // bootstrap: [
+  //   AppComponent,
+  //   AtlasmapNavbarComponent,
+  // ],
+  // bootstrap: [AppComponent],
+  entryComponents: [AppComponent]
 })
 
-export class ExampleAppModule { }
+export class ExampleAppModule {
+  constructor(private injector: Injector) { }
+
+  ngDoBootstrap() {
+    const appElement = createCustomElement(AppComponent, {injector: this.injector});
+    customElements.define('atlasmap-wc', appElement);
+  }
+
+}

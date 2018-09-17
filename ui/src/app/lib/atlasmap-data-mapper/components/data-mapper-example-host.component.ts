@@ -14,7 +14,7 @@
     limitations under the License.
 */
 
-import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { ConfigModel } from '../models/config.model';
 
 import { ErrorHandlerService } from '../services/error-handler.service';
@@ -30,6 +30,7 @@ import { Subscription } from 'rxjs';
   selector: 'data-mapper-example-host',
   template: '<data-mapper #dataMapperComponent></data-mapper>',
   providers: [MappingManagementService, ErrorHandlerService, DocumentManagementService],
+  encapsulation: ViewEncapsulation.Native
 })
 
 export class DataMapperAppExampleHostComponent implements OnInit, OnDestroy {

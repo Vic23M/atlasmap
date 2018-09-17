@@ -14,11 +14,12 @@
     limitations under the License.
 */
 
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'atlasmap-dev-root',
   template: '<data-mapper-example-host></data-mapper-example-host>',
+  encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent { }
