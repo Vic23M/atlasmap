@@ -160,6 +160,12 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/elements@^6.1.7":
+  version "6.1.7"
+  resolved "https://registry.yarnpkg.com/@angular/elements/-/elements-6.1.7.tgz#fc9f20dfd68813eae564c15efbd8c28aed2b5d3e"
+  dependencies:
+    tslib "^1.9.0"
+
 "@angular/forms@6.0.3":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.0.3.tgz#57328c9ec0ddf4ae7823ec807315501813c22752"
@@ -577,6 +583,10 @@
     "@webassemblyjs/ast" "1.4.3"
     "@webassemblyjs/wast-parser" "1.4.3"
     long "^3.2.0"
+
+"@webcomponents/custom-elements@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@webcomponents/custom-elements/-/custom-elements-1.2.0.tgz#7fc8da6c8243b15b4f69c74c65dfe2a4996c694c"
 
 abbrev@1:
   version "1.1.1"
