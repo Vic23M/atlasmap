@@ -14,11 +14,11 @@
     limitations under the License.
 */
 
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientXsrfModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { createCustomElement } from '@angular/elements';
+import { createCustomElement } from '@angular/elements';
 import { AlertModule, BsDropdownModule, TooltipModule, TypeaheadModule } from 'ngx-bootstrap';
 
 import { environment } from '../../../environments/environment';
@@ -133,27 +133,27 @@ export { DataMapperAppComponent } from './components/data-mapper-app.component';
     InitializationService,
   ],
   entryComponents: [
-    MappingSelectionComponent,
-    LookupTableComponent,
-    EmptyModalBodyComponent,
-    FieldEditComponent,
-    NamespaceEditComponent,
-    PropertyFieldEditComponent,
-    ConstantFieldEditComponent,
-    TemplateEditComponent,
-    // DataMapperAppComponent,
+    // MappingSelectionComponent,
+    // LookupTableComponent,
+    // EmptyModalBodyComponent,
+    // FieldEditComponent,
+    // NamespaceEditComponent,
+    // PropertyFieldEditComponent,
+    // ConstantFieldEditComponent,
+    // TemplateEditComponent,
+    DataMapperAppComponent,
     // DataMapperAppExampleHostComponent
   ],
-  bootstrap: [DataMapperAppExampleHostComponent],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  // bootstrap: [DataMapperAppExampleHostComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DataMapperModule {
-  // constructor() { }
+  constructor(private injector: Injector) { }
 
-  // ngDoBootstrap() {
-  //   const appElement = createCustomElement(DataMapperAppExampleHostComponent, {injector: this.injector});
-  //   customElements.define('atlasmap-wc', appElement);
-  // }
+  ngDoBootstrap() {
+    const appElement = createCustomElement(DataMapperAppComponent, {injector: this.injector});
+    customElements.define('atlasmap-wc', appElement);
+  }
 
   static withInterceptor(): Array<ModuleWithProviders> {
     return [{
