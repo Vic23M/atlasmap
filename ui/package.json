@@ -59,6 +59,7 @@
     "@angular/platform-browser-dynamic": "6.1.8",
     "@angular/router": "6.1.8",
     "@types/jasmine": "^2.8.8",
+    "@angular/elements": "^6.1.7",
     "@types/jasmine-jquery": "^1.5.32",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^10.10.2",
@@ -102,5 +103,6 @@
     "tslint": "~5.7.0",
     "typescript": "^2.9.2",
     "zone.js": "^0.8.26"
-  }
+  },
+  "dependencies": {}
 }
