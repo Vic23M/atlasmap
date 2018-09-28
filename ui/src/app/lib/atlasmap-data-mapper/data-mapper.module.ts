@@ -156,11 +156,6 @@ export const alertModuleForRoot: ModuleWithProviders = AlertModule.forRoot();
 export class DataMapperModule {
   constructor(private injector: Injector) { }
 
-  ngDoBootstrap() {
-    const appElement = createCustomElement(DataMapperAppComponent, {injector: this.injector});
-    customElements.define('atlasmap-wc', appElement);
-  }
-
   static withInterceptor(): Array<ModuleWithProviders> {
     return [{
       ngModule: DataMapperModule,
@@ -177,4 +172,10 @@ export class DataMapperModule {
       ],
     }];
   }
+
+  ngDoBootstrap() {
+    const appElement = createCustomElement(DataMapperAppComponent, {injector: this.injector});
+    customElements.define('atlasmap-wc', appElement);
+  }
+
 }
