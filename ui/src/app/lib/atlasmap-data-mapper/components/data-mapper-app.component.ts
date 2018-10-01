@@ -27,18 +27,18 @@ import { DocumentDefinitionComponent } from './document-definition.component';
 import { MappingDetailComponent } from './mapping/mapping-detail.component';
 import { Subscription } from 'rxjs';
 
-// import 'node_modules/patternfly/dist/css/patternfly.css';
-// import 'node_modules/patternfly/dist/css/patternfly-additions.css';
-// import 'node_modules/patternfly-ng/dist/css/patternfly-ng.min.css';
-// import 'node_modules/font-awesome/css/font-awesome.min.css';
-// import 'src/styles.scss';
-
 @Component({
   selector: 'data-mapper',
   moduleId: module.id,
-  encapsulation: ViewEncapsulation.Native,
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './data-mapper-app.component.html',
-  styleUrls: ['data-mapper-app.component.css'],
+  styleUrls: [
+    // '../../../../../node_modules/patternfly/dist/css/patternfly.css',
+    // '../../../../../node_modules/patternfly/dist/css/patternfly-additions.css',
+    // '../../../../../node_modules/patternfly-ng/dist/css/patternfly-ng.min.css',
+    // '../../../../../node_modules/font-awesome/css/font-awesome.min.css',
+    'data-mapper-app.component.css'
+  ]
 })
 
 export class DataMapperAppComponent implements OnInit, OnDestroy {

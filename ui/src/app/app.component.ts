@@ -17,7 +17,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'atlasmap-dev-root',
+  selector: 'atlasmap-wc',
   template: '<data-mapper-example-host></data-mapper-example-host>',
   encapsulation: ViewEncapsulation.None
 })

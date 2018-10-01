@@ -139,18 +139,8 @@ export const alertModuleForRoot: ModuleWithProviders = AlertModule.forRoot();
     InitializationService,
   ],
   entryComponents: [
-    // MappingSelectionComponent,
-    // LookupTableComponent,
-    // EmptyModalBodyComponent,
-    // FieldEditComponent,
-    // NamespaceEditComponent,
-    // PropertyFieldEditComponent,
-    // ConstantFieldEditComponent,
-    // TemplateEditComponent,
-    DataMapperAppComponent,
-    // DataMapperAppExampleHostComponent
+    DataMapperAppComponent
   ],
-  // bootstrap: [DataMapperAppExampleHostComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DataMapperModule {

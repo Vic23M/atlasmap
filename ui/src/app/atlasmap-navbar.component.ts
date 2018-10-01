@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { inflate, gzip } from 'pako';
 import { Subscription } from 'rxjs';
 
@@ -13,6 +13,7 @@ import { MappingManagementService } from './lib/atlasmap-data-mapper/services/ma
 @Component({
   selector: 'atlasmap-navbar',
   templateUrl: './atlasmap-navbar.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./lib/atlasmap-data-mapper/components/data-mapper-app.component.css']
 })
 
