@@ -104,5 +104,8 @@
     "typescript": "^2.9.2",
     "zone.js": "^0.8.26"
   },
-  "dependencies": {}
+  "dependencies": {
+    "concat": "^1.0.3",
+    "fs-extra": "^7.0.0"
+  }
 }
