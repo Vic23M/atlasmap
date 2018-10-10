@@ -68,6 +68,8 @@ export class DataMapperAppComponent implements OnInit, OnDestroy {
 
     console.log('Atlasmap: ngOnInit');
 
+    console.log('Testing');
+
     this.systemInitializedSubscription
        = this.getConfig().initializationService.systemInitialized$.subscribe(() => {
       this.updateFromConfig();
