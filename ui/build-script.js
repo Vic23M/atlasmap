@@ -3,7 +3,8 @@ const concat = require('concat');
 
 (async function build() {
   const files = [
-    './dist/inline.bundle.js',
+    //'./dist/inline.bundle.js',
+    './dist/runtime.bundle.js',
     './dist/polyfills.bundle.js',
     './dist/main.bundle.js'
   ];
