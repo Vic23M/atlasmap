@@ -51,7 +51,7 @@ export class AtlasmapNavbarComponent implements OnInit {
   }
 
   get instanceTargetsPanel(): string {
-    return this.INSTANCE_SOURCES_PANEL;
+    return this.INSTANCE_TARGETS_PANEL;
   }
 
   get schemaSourcesPanel(): string {
@@ -91,6 +91,14 @@ export class AtlasmapNavbarComponent implements OnInit {
       };
       this.reader.readAsArrayBuffer(fileContent);
     });
+  }
+
+  /**
+   * Schema import button click.  Disable initialization to trigger the loading icon.
+   */
+  processClick(loadingStatus: string) {
+    this.cfg.initCfg.initialized = false;
+    this.cfg.initializationService.updateLoadingStatus(loadingStatus);
   }
 
   /**

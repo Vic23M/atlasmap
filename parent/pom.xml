@@ -20,7 +20,7 @@
   <parent>
     <groupId>io.atlasmap</groupId>
     <artifactId>atlasmapio</artifactId>
-    <version>1.37.0-SNAPSHOT</version>
+    <version>1.39.0-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
@@ -38,13 +38,13 @@
     <asciidoctorj-pdf.version>1.5.0-alpha.16</asciidoctorj-pdf.version>
     <atlas.version.range>[1,3)</atlas.version.range>
     <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
-    <camel.version>2.21.0.fuse-720023</camel.version>
+    <camel.version>2.21.2</camel.version>
     <fabric8-maven-plugin.version>3.2.30</fabric8-maven-plugin.version>
     <hamcrest.version>1.3</hamcrest.version>
     <jackson.version>2.8.11</jackson.version>
     <jackson.version.range>[2.6,3)</jackson.version.range>
     <jackson-module-jaxb-annotations.version>2.8.6</jackson-module-jaxb-annotations.version>
-    <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
     <javax.ws.rs.version>2.0</javax.ws.rs.version>
     <jaxb-api.version>2.2.12</jaxb-api.version>
     <jaxb-impl.version>2.1</jaxb-impl.version>
@@ -75,7 +75,7 @@
     <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
     <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
-    <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
     <mockito.version>2.8.47</mockito.version>
     <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
     <osgi.symbolic.name>${project.artifactId}</osgi.symbolic.name>
@@ -533,7 +533,7 @@
           <version>${maven-surefire-plugin.version}</version>
           <configuration>
             <forkCount>2</forkCount>
-            <reuseForks>false</reuseForks>
+            <reuseForks>true</reuseForks>
           </configuration>
         </plugin>
         <plugin>

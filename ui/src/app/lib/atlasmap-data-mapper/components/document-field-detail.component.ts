@@ -55,6 +55,8 @@ export class DocumentFieldDetailComponent {
     // event's data transfer store isn't available during dragenter/dragleave/dragover, so we need
     // to store this info in a global somewhere since those methods depend on knowing if the
     // dragged field is source/target
+    event = event || window.event;
+    event.dataTransfer.setData('text', '');  // firefox bug
     this.cfg.currentDraggedField = this.field;
   }
 
@@ -71,7 +73,12 @@ export class DocumentFieldDetailComponent {
       this.isDragDropTarget = false;
       return;
     }
-    event.preventDefault();
+    if (event.preventDefault) {
+      event.preventDefault();
+    }
+    if (event.stopPropagation) {
+      event.stopPropagation();
+    }
     this.isDragDropTarget = true;
   }
 
@@ -129,7 +136,7 @@ export class DocumentFieldDetailComponent {
 
   getCssClass(): string {
     let cssClass = 'fieldDetail';
-    if (this.field.selected) {
+    if (this.selected) {
       cssClass += ' selectedField';
     }
     if (!this.field.isTerminal()) {
@@ -183,6 +190,12 @@ export class DocumentFieldDetailComponent {
 
   getFieldDetailComponent(field: Field): DocumentFieldDetailComponent {
     if (this.field === field) {
+      return this;
+    }
+
+    // Matching name and doc definition is a match
+    if ((this.field.path === field.path) && (this.field.docDef === field.docDef)) {
+      this.field = field;
       return this;
     }
     for (const c of this.fieldComponents.toArray()) {
@@ -262,4 +275,12 @@ export class DocumentFieldDetailComponent {
     const width: string = (this.field.fieldDepth * 30).toString();
     return this.sanitizer.bypassSecurityTrustStyle('display:inline; margin-left:' + width + 'px');
   }
+
+  get selected(): boolean {
+    if (this.cfg.mappings.activeMapping) {
+      return this.cfg.mappings.activeMapping.getFields(this.field.isSource()).includes(this.field);
+    }
+    return false;
+  }
+
 }

@@ -366,6 +366,7 @@ export class InitializationService {
         this.addJavaDocument('io.atlasmap.java.test.SourceOrder', true);
         this.addJavaDocument('io.atlasmap.java.test.DateTimeClass', true);
         this.addJavaDocument('io.atlasmap.java.test.SourceCollectionsClass', true);
+        this.addJavaDocument('io.atlasmap.java.test.BaseOrder$SomeStaticClass', true);
       }
     }
 
@@ -699,7 +700,7 @@ export class InitializationService {
     this.updateStatus();
   }
 
-  private updateLoadingStatus(status: string): void {
+  updateLoadingStatus(status: string): void {
     this.cfg.initCfg.loadingStatus = status;
     this.initializationStatusChangedSource.next();
   }
