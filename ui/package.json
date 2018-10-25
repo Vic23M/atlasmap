@@ -13,7 +13,7 @@
   "scripts": {
     "ng": "ng",
     "prebuild": "rimraf ./dist",
-    "build": "ng build --prod --output-hashing=none && node build-script.js",
+    "build:wc": "ng build --output-hashing=none && node build-script.js",
     "build:lib": "ng build @atlasmap/atlasmap-data-mapper-lib",
     "build:app": "ng build --aot --progress=false @atlasmap/atlasmap-data-mapper",
     "e2e": "ng e2e",
@@ -65,7 +65,7 @@
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^8.10.17",
     "@types/webpack-env": "^1.13.6",
-    "@webcomponents/custom-elements": "^1.2.0",
+    "@webcomponents/custom-elements": "^1.2.1",
     "bootstrap": "^4.1.2",
     "canonical-path": "0.0.2",
     "chart.js": "^2.5.0",

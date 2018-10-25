@@ -24,13 +24,7 @@
             "assets": [
               "src/assets"
             ],
-            "styles": [
-              "node_modules/patternfly/dist/css/patternfly.css",
-              "node_modules/patternfly/dist/css/patternfly-additions.css",
-              "node_modules/patternfly-ng/dist/css/patternfly-ng.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "src/styles.scss"
-            ],
+            "styles": [],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/jquery-match-height/dist/jquery.matchHeight.js",

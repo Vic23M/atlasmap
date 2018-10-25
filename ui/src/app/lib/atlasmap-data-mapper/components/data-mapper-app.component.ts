@@ -34,9 +34,9 @@ import { Subscription } from 'rxjs';
   templateUrl: './data-mapper-app.component.html',
   styleUrls: [
     '../../../../../node_modules/patternfly/dist/css/patternfly.css',
-    // '../../../../../node_modules/patternfly/dist/css/patternfly-additions.css',
-    // '../../../../../node_modules/patternfly-ng/dist/css/patternfly-ng.min.css',
-    // '../../../../../node_modules/font-awesome/css/font-awesome.min.css',
+    '../../../../../node_modules/patternfly/dist/css/patternfly-additions.css',
+    '../../../../../node_modules/patternfly-ng/dist/css/patternfly-ng.min.css',
+    '../../../../../node_modules/font-awesome/css/font-awesome.min.css',
     'data-mapper-app.component.css'
   ]
 })
