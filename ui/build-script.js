@@ -5,11 +5,15 @@ const concat = require('concat');
   const files = [
     './dist/app/runtime.js',
     './dist/app/polyfills.js',
+    './dist/app/scripts.js',
+    './dist/app/vendor.js',
+    './dist/app/main.js',
     // './dist/lib/bundles/atlasmap-atlasmap-data-mapper.umd.js',
     // './dist/lib/esm5/atlasmap-atlasmap-data-mapper.js',
-    './dist/lib/esm2015/atlasmap-atlasmap-data-mapper.js',
+    // './dist/lib/esm2015/atlasmap-atlasmap-data-mapper.js',
     // './dist/lib/fesm5/atlasmap-atlasmap-data-mapper.js',
-    // './dist/lib/fesm2015/atlasmap-atlasmap-data-mapper.js'
+    //'./dist/lib/fesm2015/atlasmap-atlasmap-data-mapper.js'
+    // './dist/lib/bundles/atlasmap-atlasmap-data-mapper.umd.js'
   ];
 
   await fs.ensureDir('dist/wc');
