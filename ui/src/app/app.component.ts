@@ -19,7 +19,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'atlasmap-wc',
   template: '<data-mapper-example-host></data-mapper-example-host>',
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 
 export class AppComponent { }

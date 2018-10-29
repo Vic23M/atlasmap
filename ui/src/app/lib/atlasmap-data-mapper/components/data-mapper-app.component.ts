@@ -30,7 +30,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'data-mapper',
   moduleId: module.id,
-  encapsulation: ViewEncapsulation.ShadowDom,
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './data-mapper-app.component.html',
   styleUrls: [
     '../../../../../node_modules/patternfly/dist/css/patternfly.css',
@@ -65,10 +65,6 @@ export class DataMapperAppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
-    console.log('Atlasmap: ngOnInit');
-
-    console.log('Testing');
 
     this.systemInitializedSubscription
        = this.getConfig().initializationService.systemInitialized$.subscribe(() => {

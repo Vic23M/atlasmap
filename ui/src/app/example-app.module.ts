@@ -46,9 +46,11 @@ import { DataMapperModule } from './lib/atlasmap-data-mapper/data-mapper.module'
 
 export class ExampleAppModule {
   constructor(private injector: Injector) {
-    const atlasmap = createCustomElement(AppComponent, { injector });
-    customElements.define('atlasmap-wc', atlasmap);
+
   }
 
-  ngDoBootstrap() {}
+  ngDoBootstrap() {
+    const atlasmap = createCustomElement(AppComponent, { injector: this.injector });
+    customElements.define('atlasmap-wc', atlasmap);
+  }
 }

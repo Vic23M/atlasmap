@@ -18,7 +18,6 @@ import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA, Injector } from 
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientXsrfModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { createCustomElement } from '@angular/elements';
 import { AlertModule, BsDropdownModule, TooltipModule, TypeaheadModule } from 'ngx-bootstrap';
 
 import { environment } from '../../../environments/environment';
@@ -139,8 +138,16 @@ export const alertModuleForRoot: ModuleWithProviders = AlertModule.forRoot();
     InitializationService,
   ],
   entryComponents: [
-    DataMapperAppComponent
+    MappingSelectionComponent,
+    LookupTableComponent,
+    EmptyModalBodyComponent,
+    FieldEditComponent,
+    NamespaceEditComponent,
+    PropertyFieldEditComponent,
+    ConstantFieldEditComponent,
+    TemplateEditComponent,
   ],
+  bootstrap: [DataMapperAppExampleHostComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DataMapperModule {
@@ -161,11 +168,6 @@ export class DataMapperModule {
         },
       ],
     }];
-  }
-
-  ngDoBootstrap() {
-    const appElement = createCustomElement(DataMapperAppComponent, {injector: this.injector});
-    customElements.define('atlasmap-wc', appElement);
   }
 
 }
