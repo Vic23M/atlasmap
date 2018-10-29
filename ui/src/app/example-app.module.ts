@@ -19,6 +19,7 @@ import { NgModule, Injector } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { createCustomElement } from "@angular/elements";
 import { AppComponent } from './app.component';
 import { AtlasmapNavbarComponent } from './atlasmap-navbar.component';
 
@@ -44,5 +45,10 @@ import { DataMapperModule } from './lib/atlasmap-data-mapper/data-mapper.module'
 })
 
 export class ExampleAppModule {
-  constructor() { }
+  constructor(private injector: Injector) {
+    const atlasmap = createCustomElement(AppComponent, { injector });
+    customElements.define('atlasmap-wc', atlasmap);
+  }
+
+  ngDoBootstrap() {}
 }
