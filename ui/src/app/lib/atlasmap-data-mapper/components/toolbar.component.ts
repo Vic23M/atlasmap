@@ -43,7 +43,7 @@ export class ToolbarComponent implements OnInit {
   async readFile(fileContent: Blob): Promise<Uint8Array> {
     return new Promise<Uint8Array>((resolve, reject) => {
       this.reader.onload = (event: any) => {
-        const arrayBuffer = this.reader.result;
+        const arrayBuffer: any = this.reader.result;
         const bytes = new Uint8Array(arrayBuffer);
         resolve(bytes);
       };
@@ -51,19 +51,13 @@ export class ToolbarComponent implements OnInit {
     });
   }
 
-  /**
-   * Schema import button click.  Disable initialization to trigger the loading icon.
-   */
-  processClick(loadingStatus: string) {
-    this.cfg.initCfg.initialized = false;
-    this.cfg.initializationService.updateLoadingStatus(loadingStatus);
-  }
-
   /* A user has selected a compressed mappings catalog file to be imported into the canvas.
   *
   * @param event
   */
   async processMappingsCatalog(event) {
+    this.cfg.initCfg.initialized = false;
+    this.cfg.initializationService.updateLoadingStatus('Importing AtlasMap Mappings');
 
     // Wait for the async read of the selected mappings doc to be completed.
     try {
