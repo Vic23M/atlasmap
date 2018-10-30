@@ -30,7 +30,6 @@ import { Subscription } from 'rxjs';
   selector: 'data-mapper-example-host',
   template: '<data-mapper #dataMapperComponent></data-mapper>',
   providers: [MappingManagementService, ErrorHandlerService, DocumentManagementService]
-  // encapsulation: ViewEncapsulation.None
 })
 
 export class DataMapperAppExampleHostComponent implements OnInit, OnDestroy {

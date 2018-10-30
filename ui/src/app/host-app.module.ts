@@ -38,16 +38,14 @@ import { DataMapperModule } from './lib/atlasmap-data-mapper/data-mapper.module'
     DataMapperModule.withInterceptor(),
   ],
   providers: [],
-  bootstrap: [
+  entryComponents: [
     AppComponent,
     AtlasmapNavbarComponent
   ]
 })
 
-export class ExampleAppModule {
-  constructor(private injector: Injector) {
-
-  }
+export class HostAppModule {
+  constructor(private injector: Injector) {}
 
   ngDoBootstrap() {
     const atlasmap = createCustomElement(AppComponent, { injector: this.injector });

@@ -16,9 +16,11 @@ const path = require('path');
 
   const location = path.resolve(__dirname, 'dist', 'wc', 'package.json');
   const pkgJson = {
-    version: '10.29.2018',
+    version: '0.0.5',
     name: '@atlasmap/atlasmap-data-mapper',
-    description: 'Atlasmap Data Mapper UI module as Web Component'
+    description: 'Atlasmap Data Mapper UI module as Web Component',
+    license: 'MIT',
+    main: 'atlasmap-wc.js'
   };
   fs.writeFileSync(location, JSON.stringify(pkgJson, null, 2));
 
