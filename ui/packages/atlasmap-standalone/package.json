@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@types/jest": "24.9.1",
-    "typescript": "~3.9.9"
+    "typescript": "~4.6.4"
   },
   "resolutions": {
     "jest": "24.9.0",
