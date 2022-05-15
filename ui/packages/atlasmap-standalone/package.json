@@ -47,7 +47,7 @@
     "use-debounce": "^7.0.0"
   },
   "devDependencies": {
-    "@types/jest": "24.9.1",
+    "@types/jest": "27.5.1",
     "typescript": "~3.9.9"
   },
   "resolutions": {
