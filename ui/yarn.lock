@@ -2719,27 +2719,27 @@
     "@octokit/openapi-types" "^7.0.0"
 
 "@patternfly/react-core@^4.147.0", "@patternfly/react-core@^4.152.4":
-  version "4.152.4"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.152.4.tgz#fa008d155ab0c4161aab27bb67ad88fb8689dee2"
-  integrity sha512-saMnAoF3KnYB5k6K04Y6NtO61bXYl71yzGPYSrM/DjyWDlIGLqPPhMe4kbWafLTpSgJdkxPoODgVMDp2ZIJ0Jw==
+  version "4.214.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.214.1.tgz#d04b2902406fa0b42bed812be19e1f565bca0c20"
+  integrity sha512-XHEqXpnBEDyLVdAEDOYlGqFHnN43eNLSD5HABB99xO6541JV9MRnbxs0+v9iYnfhcKh/8bhA9ITXnUi3f2PEvg==
   dependencies:
-    "@patternfly/react-icons" "^4.11.14"
-    "@patternfly/react-styles" "^4.11.13"
-    "@patternfly/react-tokens" "^4.12.15"
+    "@patternfly/react-icons" "^4.65.1"
+    "@patternfly/react-styles" "^4.64.1"
+    "@patternfly/react-tokens" "^4.66.1"
     focus-trap "6.2.2"
     react-dropzone "9.0.0"
     tippy.js "5.1.2"
     tslib "^2.0.0"
 
-"@patternfly/react-icons@^4.11.14", "@patternfly/react-icons@^4.11.8":
-  version "4.11.14"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.11.14.tgz#ef7a2de3f78d5bd83715afb9651a185a89901c22"
-  integrity sha512-SBwID1p+UaQ9BSmzIRFr+BJEhYgx1rWHlm2HIZzhoz7BG3Q7byaQ8ZNfZLm0D+ZGVJQ+fq0zUHGE1nzxDPFqNQ==
+"@patternfly/react-icons@^4.11.14", "@patternfly/react-icons@^4.11.8", "@patternfly/react-icons@^4.65.1":
+  version "4.65.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.65.1.tgz#bc31f349577e416c8211b68da4dfb5e46e8039d7"
+  integrity sha512-CUYFRPztFkR7qrXq/0UAhLjeHd8FdjLe4jBjj8tfKc7OXwxDeZczqNFyRMATZpPaduTH7BU2r3OUjQrgAbquWg==
 
-"@patternfly/react-styles@^4.11.13", "@patternfly/react-styles@^4.11.8":
-  version "4.11.13"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.11.13.tgz#6595adc5ff40585add0128d27d420322b65b86a9"
-  integrity sha512-svhnWIqZwJt1cOxwYjvz6lVYeL+c9D17xpKqlkJapXRxJL3ppTfIqwBrT3o9+02ElaXUTKt4xjMkSnEVjw4qxA==
+"@patternfly/react-styles@^4.11.13", "@patternfly/react-styles@^4.11.8", "@patternfly/react-styles@^4.64.1":
+  version "4.64.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.64.1.tgz#a4e973b9153b269c821226ddf72fb92ff90c5a06"
+  integrity sha512-+GxULkP2o5Vpr9w+J4NiGOGzhTfNniYzdPGEF/yC+oDoAXB6Q1HJyQnEj+kJH31xNvwmw3G3VFtwRLX4ZWr0oA==
 
 "@patternfly/react-table@^4.29.37":
   version "4.29.58"
@@ -2753,10 +2753,10 @@
     lodash "^4.17.19"
     tslib "^2.0.0"
 
-"@patternfly/react-tokens@^4.12.15":
-  version "4.12.15"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.12.15.tgz#af760a1b378edce85fd2f7394553911b6ee3c4f0"
-  integrity sha512-lRW0qxGjuFEPMweBSQFHNRNoxavx5uR8b28f0lPN0Jlz4QsaCFVTmHM2XqflOHDpjE8SPJW/hJMSsyUrqnM5dw==
+"@patternfly/react-tokens@^4.12.15", "@patternfly/react-tokens@^4.66.1":
+  version "4.66.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.66.1.tgz#524f7cc806e95622ec7b752ccf0db621383d20c6"
+  integrity sha512-k0IWqpufM6ezT+3gWlEamqQ7LW9yi8e8cBBlude5IU8eIEqIG6AccwR1WNBEK1wCVWGwVxakLMdf0XBLl4k52Q==
 
 "@patternfly/react-topology@^4.9.42":
   version "4.9.62"
@@ -5395,12 +5395,12 @@ babel-loader@8.1.0:
     schema-utils "^2.6.5"
 
 babel-loader@^8.2.2:
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.2.tgz#9363ce84c10c9a40e6c753748e1441b60c8a0b81"
-  integrity sha512-JvTd0/D889PQBtUXJ2PXaKU/pjZDMtHA9V2ecm+eNRmmBCMR09a+fmpGTNwnJtFmFl5Ei7Vy47LjBb+L0wQ99g==
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.5.tgz#d45f585e654d5a5d90f5350a779d7647c5ed512e"
+  integrity sha512-OSiFfH89LrEMiWd4pLNqGz4CwJDtbs2ZVc+iGu2HrkRfPxId9F2anQj38IxWpmRfsUY0aBZYi1EFcd3mhtRMLQ==
   dependencies:
     find-cache-dir "^3.3.1"
-    loader-utils "^1.4.0"
+    loader-utils "^2.0.0"
     make-dir "^3.1.0"
     schema-utils "^2.6.5"
 
@@ -15903,9 +15903,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier@^1.19.1, prettier@^2.0.0, prettier@~2.2.1:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.0.tgz#85bdfe0f70c3e777cf13a4ffff39713ca6f64cba"
-  integrity sha512-DsEPLY1dE5HF3BxCRBmD4uYZ+5DCbvatnolqTqcxEgKVZnL2kUfyu7b8pPQ5+hTBkdhU9SLUmK0/pHb07RE4WQ==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
+  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
 
 pretty-bytes@^5.1.0:
   version "5.6.0"
